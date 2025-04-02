@@ -465,7 +465,7 @@ Your struct should track a pointer to the open file's underlying inode and metad
 
 Once you define your struct, you need to manage its allocation and deallocation. 
 Kernel typically has a hard limit on the total number of open files across all processes, in xk, we require you to support `NFILE` (`inc/param.h`)
-amount of total open files. This means that you can allocate a static array of `struct file_info` as your global file info table.
+amount of total open files. This means that you can allocate a global array of `struct file_info` as your global file info table.
 You can then manage the allocation and deallocation of open files. Make sure that you initialize all fields of your struct upon an allocation or deallocation.
 
 We highly recommend that you declare the following functions in `kernel/file.c` to invoke after you have validated the system call
