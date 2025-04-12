@@ -502,8 +502,7 @@ For example, to open a file, you can call `iopen`, which performs a lookup from 
 root directory of the file system. Once the file is found, a `struct inode*`
 is returned as a handle so that you can request more file system operations with it.
 
-For this lab, you will be using `iopen`, `irelease`, `concurrent_readi`, `concurrent_writei`, 
-`idup`, and `concurrent_stati` to implement the file functions listed above.
+For this lab, you will be using `iopen`, `irelease`, `concurrent_readi`, `concurrent_writei`, and `concurrent_stati` to implement the file functions listed above. Note that `idup` is not required to implement `file_dup`.
 
 > *Fun facts: How are there any files if writes are not supported?* If you recall, when we run xk and QEMU, we give it an initial file system 
 > image `out/fs.img` written by [mkfs.c](/mkfs.c).
